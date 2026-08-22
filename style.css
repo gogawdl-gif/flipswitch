@@ -66,12 +66,6 @@ a { color: inherit; text-decoration: none; }
 }
 .btn-primary:hover { opacity: 0.9; }
 
-.btn-dark {
-  background: #0C0B09;
-  color: var(--lime);
-}
-.btn-dark:hover { opacity: 0.85; }
-
 .btn-sm { padding: 10px 20px; font-size: 14px; }
 .btn-lg { padding: 16px 28px; font-size: 16px; }
 
@@ -93,11 +87,19 @@ a { color: inherit; text-decoration: none; }
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-head);
   font-weight: 800;
   font-size: 19px;
   letter-spacing: -0.03em;
 }
+
+.logo-mark { display: block; flex-shrink: 0; }
+.logo-mark .logo-lime { fill: var(--lime); }
+.logo-mark .logo-white { fill: var(--text); }
+.logo-mark .logo-knob { fill: var(--bg); }
 
 .nav {
   display: flex;
@@ -168,6 +170,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 .app-card-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 15px;
@@ -327,8 +332,10 @@ a { color: inherit; text-decoration: none; }
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .feature-card {
@@ -408,7 +415,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- final cta ---------- */
 .final-cta {
-  background: var(--lime);
+  background: var(--text);
   border-radius: 36px;
   margin: 0 32px 32px;
   padding: 96px 0;
@@ -423,7 +430,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .final-cta h2 {
-  color: #0C0B09;
+  color: var(--bg);
   font-size: 48px;
 }
 
@@ -437,6 +444,12 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer-copy {

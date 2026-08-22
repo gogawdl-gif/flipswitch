@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>FlipSwitch — Go private in one flip.</title>
 <meta name="description" content="FlipSwitch is a VPN and ad blocker with one control: a switch. Flip it on, you're private and ad-free. WireGuard tunnel, system-wide ad blocking, zero logs." />
-<link rel="icon" href="data:,">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,7 +15,15 @@
 
 <header class="site-header">
   <div class="wrap header-row">
-    <div class="logo">FlipSwitch</div>
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 120 120" width="30" height="30" aria-hidden="true">
+        <path class="logo-lime" d="M40 30 L80 30 A12 12 0 1 1 80 54 L62 54 A8 8 0 0 0 54 62 L54 80 A12 12 0 1 1 30 80 L30 40 A10 10 0 0 1 40 30 Z" />
+        <rect class="logo-white" x="38" y="56" width="54" height="24" rx="12" />
+        <circle class="logo-knob" cx="76" cy="42" r="7" />
+        <circle class="logo-knob" cx="52" cy="68" r="7" />
+      </svg>
+      <span>FlipSwitch</span>
+    </div>
     <nav class="nav">
       <a href="#features">Features</a>
       <a href="#compare">Compare</a>
@@ -38,7 +46,15 @@
       <div class="hero-demo">
         <div class="app-card" id="appCard">
           <div class="app-card-top">
-            <span class="app-card-name">FlipSwitch</span>
+            <span class="app-card-name">
+              <svg class="logo-mark logo-mark-sm" viewBox="0 0 120 120" width="16" height="16" aria-hidden="true">
+                <path class="logo-lime" d="M40 30 L80 30 A12 12 0 1 1 80 54 L62 54 A8 8 0 0 0 54 62 L54 80 A12 12 0 1 1 30 80 L30 40 A10 10 0 0 1 40 30 Z" />
+                <rect class="logo-white" x="38" y="56" width="54" height="24" rx="12" />
+                <circle class="logo-knob" cx="76" cy="42" r="7" />
+                <circle class="logo-knob" cx="52" cy="68" r="7" />
+              </svg>
+              FlipSwitch
+            </span>
             <span class="status-pill" id="statusPill">
               <span class="status-dot" id="statusDot"></span>
               <span id="statusText">UNPROTECTED</span>
@@ -89,17 +105,12 @@
         <div class="feature-card">
           <div class="feature-mark">01</div>
           <h3>Full-tunnel VPN</h3>
-          <p>WireGuard under the hood, tuned for speed. Every app on your device routes through it, not just the browser.</p>
+          <p>WireGuard under the hood, tuned for speed, with zero connection logs. Every app on your device routes through it, not just the browser.</p>
         </div>
         <div class="feature-card">
           <div class="feature-mark">02</div>
           <h3>System-wide ad blocking</h3>
           <p>Blocks ads and trackers at the network level. Works in every app, not just Safari or Chrome.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-mark">03</div>
-          <h3>Zero-log policy</h3>
-          <p>We don't store connection logs, browsing history, or IP timestamps. Nothing to hand over, because nothing exists.</p>
         </div>
       </div>
     </div>
@@ -132,7 +143,7 @@
   <section class="final-cta" id="cta">
     <div class="wrap final-cta-inner">
       <h2>Flip it. Forget it.</h2>
-      <a href="#" class="btn btn-dark btn-lg">Flip it on — free</a>
+      <a href="#" class="btn btn-primary btn-lg">Flip it on — free</a>
     </div>
   </section>
 
@@ -140,7 +151,15 @@
 
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <span class="mono footer-copy">FlipSwitch</span>
+    <span class="footer-brand">
+      <svg class="logo-mark logo-mark-sm" viewBox="0 0 120 120" width="15" height="15" aria-hidden="true">
+        <path class="logo-lime" d="M40 30 L80 30 A12 12 0 1 1 80 54 L62 54 A8 8 0 0 0 54 62 L54 80 A12 12 0 1 1 30 80 L30 40 A10 10 0 0 1 40 30 Z" />
+        <rect class="logo-white" x="38" y="56" width="54" height="24" rx="12" />
+        <circle class="logo-knob" cx="76" cy="42" r="7" />
+        <circle class="logo-knob" cx="52" cy="68" r="7" />
+      </svg>
+      <span class="mono footer-copy">FlipSwitch</span>
+    </span>
     <div class="footer-links">
       <a href="#">Privacy</a>
       <a href="#">Terms</a>
