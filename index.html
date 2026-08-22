@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FlipSwitch — Go private in one flip.</title>
+<meta name="description" content="FlipSwitch is a VPN and ad blocker with one control: a switch. Flip it on, you're private and ad-free. WireGuard tunnel, system-wide ad blocking, zero logs." />
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <div class="logo">FlipSwitch</div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#compare">Compare</a>
+    </nav>
+    <a href="#cta" class="btn btn-primary btn-sm">Flip it on</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>Go private in<br>one flip.</h1>
+        <p class="hero-sub">A full-tunnel VPN and system-wide ad blocker, controlled by a single switch. No settings to configure. No dashboard to learn.</p>
+        <a href="#cta" class="btn btn-primary btn-lg">Flip it on — free</a>
+        <p class="hero-fine">WireGuard tunnel. Zero logs. Cancel anytime.</p>
+      </div>
+
+      <div class="hero-demo">
+        <div class="app-card" id="appCard">
+          <div class="app-card-top">
+            <span class="app-card-name">FlipSwitch</span>
+            <span class="status-pill" id="statusPill">
+              <span class="status-dot" id="statusDot"></span>
+              <span id="statusText">UNPROTECTED</span>
+            </span>
+          </div>
+
+          <button class="toggle-wrap" id="toggleBtn" role="switch" aria-checked="false" aria-label="Toggle protection">
+            <span class="toggle-track" id="toggleTrack">
+              <span class="toggle-knob" id="toggleKnob"></span>
+            </span>
+          </button>
+
+          <div class="app-card-readout">
+            <div class="readout-row">
+              <span class="readout-label">IP address</span>
+              <span class="readout-value mono" id="ipValue">104.28.212.9</span>
+            </div>
+            <div class="readout-row">
+              <span class="readout-label">Ads blocked</span>
+              <span class="readout-value mono" id="adsValue">0</span>
+            </div>
+            <div class="readout-row">
+              <span class="readout-label">Speed</span>
+              <span class="readout-value mono" id="speedValue">—</span>
+            </div>
+          </div>
+        </div>
+        <p class="hero-demo-caption">Try it. This is the actual toggle.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ticker" aria-label="Live stats">
+    <div class="wrap ticker-row">
+      <div class="ticker-item"><span class="mono ticker-num">2,481,902</span><span class="ticker-label">ads blocked today</span></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><span class="mono ticker-num">614,330</span><span class="ticker-label">trackers killed today</span></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><span class="mono ticker-num">3%</span><span class="ticker-label">avg speed loss</span></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><span class="mono ticker-num">0</span><span class="ticker-label">logs kept</span></div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="wrap">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-mark">01</div>
+          <h3>Full-tunnel VPN</h3>
+          <p>WireGuard under the hood, tuned for speed. Every app on your device routes through it, not just the browser.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-mark">02</div>
+          <h3>System-wide ad blocking</h3>
+          <p>Blocks ads and trackers at the network level. Works in every app, not just Safari or Chrome.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-mark">03</div>
+          <h3>Zero-log policy</h3>
+          <p>We don't store connection logs, browsing history, or IP timestamps. Nothing to hand over, because nothing exists.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="compare" id="compare">
+    <div class="wrap">
+      <h2>Everyone else vs. FlipSwitch</h2>
+      <div class="compare-table">
+        <div class="compare-col compare-col-them">
+          <div class="compare-head">Everyone else</div>
+          <div class="compare-row">47 settings screens</div>
+          <div class="compare-row">Protocol picker you didn't ask for</div>
+          <div class="compare-row">"Choose your server" from 94 cities</div>
+          <div class="compare-row">Ad blocker sold separately</div>
+          <div class="compare-row">Fear copy about hackers on airport wifi</div>
+        </div>
+        <div class="compare-col compare-col-us">
+          <div class="compare-head">FlipSwitch</div>
+          <div class="compare-row">One switch</div>
+          <div class="compare-row">WireGuard, decided for you</div>
+          <div class="compare-row">Nearest fast server, picked automatically</div>
+          <div class="compare-row">Built in</div>
+          <div class="compare-row">A switch that works</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta" id="cta">
+    <div class="wrap final-cta-inner">
+      <h2>Flip it. Forget it.</h2>
+      <a href="#" class="btn btn-dark btn-lg">Flip it on — free</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span class="mono footer-copy">FlipSwitch</span>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
