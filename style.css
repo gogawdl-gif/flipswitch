@@ -634,17 +634,30 @@ a { color: inherit; text-decoration: none; }
 .compare-table {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  overflow: hidden;
+  gap: 20px;
+  align-items: start;
 }
 
-.compare-col-them {
-  border-right: 1px solid var(--border);
+.compare-col {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .compare-col-us {
   background: rgba(198, 241, 53, 0.035);
+  border: 1.5px solid var(--lime-dim);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  margin-top: -14px;
+  margin-bottom: -14px;
+}
+
+.compare-cta {
+  padding: 6px 28px 28px;
+}
+
+.compare-cta .btn {
+  width: 100%;
 }
 
 .compare-head {
@@ -674,7 +687,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--bg);
 }
 
-.compare-row:last-child {
+.compare-col-them .compare-row:last-child {
   border-bottom: none;
 }
 
@@ -877,7 +890,7 @@ a { color: inherit; text-decoration: none; }
   .browser-demo-inner { grid-template-columns: 1fr; gap: 40px; }
   .browser-demo-copy p { max-width: none; }
   .compare-table { grid-template-columns: 1fr; }
-  .compare-col-them { border-right: none; border-bottom: 1px solid var(--border); }
+  .compare-col-us { margin-top: 0; margin-bottom: 0; }
   .final-cta { margin: 0 16px 16px; border-radius: 24px; padding: 64px 0; }
   .final-cta h2 { font-size: 32px; }
   .wrap { padding: 0 20px; }
