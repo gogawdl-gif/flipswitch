@@ -13,7 +13,17 @@
 </head>
 <body>
 
-<header class="site-header">
+<div class="exposure-bar section-dark" aria-live="polite">
+  <div class="wrap exposure-row">
+    <span class="mono exposure-item">Your IP: <strong id="exposureIp">detecting</strong></span>
+    <span class="exposure-sep">·</span>
+    <span class="mono exposure-item">Your ISP: <strong id="exposureIsp">detecting</strong></span>
+    <span class="exposure-sep">·</span>
+    <span class="mono exposure-item">Your status: <strong id="exposureStatus" class="status-unprotected">Unprotected</strong></span>
+  </div>
+</div>
+
+<header class="site-header section-dark">
   <div class="wrap header-row">
     <div class="logo">
       <svg class="logo-mark" viewBox="0 0 120 120" width="36" height="36" aria-hidden="true">
@@ -45,7 +55,7 @@
       </div>
 
       <div class="hero-demo">
-        <div class="app-card" id="appCard">
+        <div class="app-card section-dark" id="appCard">
           <div class="app-card-top">
             <span class="app-card-name">
               <svg class="logo-mark logo-mark-sm" viewBox="0 0 120 120" width="20" height="20" aria-hidden="true">
@@ -88,18 +98,6 @@
     </div>
   </section>
 
-  <section class="ticker section-light" aria-label="Live stats">
-    <div class="wrap ticker-row">
-      <div class="ticker-item"><span class="mono ticker-num">2,481,902</span><span class="ticker-label">ads blocked today</span></div>
-      <div class="ticker-divider"></div>
-      <div class="ticker-item"><span class="mono ticker-num">614,330</span><span class="ticker-label">trackers blocked today</span></div>
-      <div class="ticker-divider"></div>
-      <div class="ticker-item"><span class="mono ticker-num">3%</span><span class="ticker-label">avg speed loss</span></div>
-      <div class="ticker-divider"></div>
-      <div class="ticker-item"><span class="mono ticker-num">0</span><span class="ticker-label">logs kept</span></div>
-    </div>
-  </section>
-
   <section class="features" id="features">
     <div class="wrap">
       <div class="feature-grid">
@@ -117,7 +115,7 @@
     </div>
   </section>
 
-  <section class="devices section-light" aria-label="Supported platforms">
+  <section class="devices" aria-label="Supported platforms">
     <div class="wrap ticker-row">
       <div class="ticker-item"><span class="ticker-label mono">Available on</span></div>
       <div class="ticker-divider"></div>
@@ -153,7 +151,7 @@
     </div>
   </section>
 
-  <section class="faq section-light" id="faq">
+  <section class="faq" id="faq">
     <div class="wrap">
       <h2>Questions, answered.</h2>
       <div class="faq-list">
@@ -177,7 +175,7 @@
     </div>
   </section>
 
-  <section class="final-cta" id="cta">
+  <section class="final-cta section-dark" id="cta">
     <div class="wrap final-cta-inner">
       <h2>Flip it. Forget it.</h2>
       <a href="#" class="btn btn-primary btn-lg">Download on the App Store</a>
@@ -186,7 +184,7 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer section-dark">
   <div class="wrap footer-row">
     <span class="footer-brand">
       <svg class="logo-mark logo-mark-sm" viewBox="0 0 120 120" width="18" height="18" aria-hidden="true">

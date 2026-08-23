@@ -2,12 +2,12 @@
 :root {
   --bg: #0C0B09;
   --surface: #14120F;
-  --border: #232019;
+  --border: #E3DCC8;
   --text: #F6F2E6;
-  --muted: #8A857B;
+  --muted: #6B6656;
   --lime: #C6F135;
   --lime-dim: #97b428;
-  --accent: var(--lime);
+  --accent: #5C6B14;
 
   --font-head: "Bricolage Grotesque", Inter, system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -15,12 +15,12 @@
 }
 
 * { box-sizing: border-box; }
-html { color-scheme: dark; }
+html { color-scheme: light; }
 
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--text);
+  background: var(--text);
+  color: var(--bg);
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.5;
@@ -47,13 +47,12 @@ p { margin: 0; }
 
 a { color: inherit; text-decoration: none; }
 
-/* ---------- zebra: light section variant ---------- */
-.section-light {
-  background: var(--text);
-  color: var(--bg);
-  --muted: #6B6656;
-  --border: #E3DCC8;
-  --accent: #5C6B14;
+/* ---------- dark section variant (minority accent, on the light page default) ---------- */
+.section-dark {
+  color: var(--text);
+  --muted: #8A857B;
+  --border: #232019;
+  --accent: var(--lime);
 }
 
 /* ---------- buttons ---------- */
@@ -78,6 +77,39 @@ a { color: inherit; text-decoration: none; }
 
 .btn-sm { padding: 10px 20px; font-size: 14px; }
 .btn-lg { padding: 16px 28px; font-size: 16px; }
+
+/* ---------- exposure bar ---------- */
+.exposure-bar {
+  background: var(--bg);
+  padding: 10px 0;
+}
+
+.exposure-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.exposure-item {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.exposure-item strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.exposure-sep {
+  color: var(--border);
+  font-size: 12px;
+}
+
+#exposureStatus.status-unprotected { color: #FF6B57; }
+#exposureStatus.status-protected { color: var(--lime); }
 
 /* ---------- header ---------- */
 .site-header {
@@ -299,13 +331,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
 }
 
-/* ---------- ticker ---------- */
-.ticker {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 32px 0;
-}
-
+/* ---------- ticker row (shared by devices strip) ---------- */
 .ticker-row {
   display: flex;
   align-items: center;
@@ -347,7 +373,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 .feature-card {
-  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 24px;
   padding: 36px 28px;
@@ -373,6 +398,8 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- devices ---------- */
 .devices {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   padding: 32px 0;
 }
 
@@ -419,7 +446,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .compare-col-us .compare-row {
-  color: var(--text);
+  color: var(--bg);
 }
 
 .compare-row:last-child {
@@ -507,6 +534,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- footer ---------- */
 .site-footer {
+  background: var(--bg);
   border-top: 1px solid var(--border);
   padding: 28px 0;
 }
