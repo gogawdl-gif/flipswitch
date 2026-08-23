@@ -7,12 +7,11 @@
   const speedValue = document.getElementById('speedValue');
   const exposureIp = document.getElementById('exposureIp');
   const exposureIsp = document.getElementById('exposureIsp');
-  const exposureStatus = document.getElementById('exposureStatus');
+  const ctaSection = document.getElementById('cta');
 
   const FALLBACK_IP = '104.28.212.9';
   const FALLBACK_ISP = 'unknown';
   const MASKED_IP = '•.•.•.•';
-  const MASKED_ISP = 'hidden';
 
   let realIp = FALLBACK_IP;
   let realIsp = FALLBACK_ISP;
@@ -21,26 +20,24 @@
   let adsCount = 0;
   let tickInterval = null;
 
-  // Best-effort live lookup of the visitor's real IP/ISP. Falls back to a
-  // placeholder if the request is blocked (an ad blocker will do this) or fails.
+  // Best-effort live lookup of the visitor's real IP/ISP, shown in the top
+  // exposure bar. This reflects the visitor's actual, unchanged status: it
+  // is never touched by the demo toggle below, which only illustrates the
+  // app's own UI and does not actually protect anything.
   fetch('https://ipapi.co/json/')
     .then(function (res) { return res.json(); })
     .then(function (data) {
       if (data && data.ip) {
         realIp = data.ip;
         realIsp = (data.org || FALLBACK_ISP).replace(/^AS\d+\s*/, '');
-        if (!on) {
-          exposureIp.textContent = realIp;
-          exposureIsp.textContent = realIsp;
-          ipValue.textContent = realIp;
-        }
+        exposureIp.textContent = realIp;
+        exposureIsp.textContent = realIsp;
+        if (!on) ipValue.textContent = realIp;
       }
     })
     .catch(function () {
-      if (!on) {
-        exposureIp.textContent = FALLBACK_IP;
-        exposureIsp.textContent = FALLBACK_ISP;
-      }
+      exposureIp.textContent = FALLBACK_IP;
+      exposureIsp.textContent = FALLBACK_ISP;
     });
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -77,22 +74,17 @@
         adsCount = 128;
         adsValue.textContent = '128';
       }
-      exposureIp.textContent = MASKED_IP;
-      exposureIsp.textContent = MASKED_ISP;
-      exposureStatus.textContent = 'Protected';
-      exposureStatus.classList.remove('status-unprotected');
-      exposureStatus.classList.add('status-protected');
+      // This is a demo of the app's own UI, not a real connection, so the
+      // exposure bar above (your actual IP/ISP/status) is left untouched.
+      window.setTimeout(function () {
+        if (ctaSection) ctaSection.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+      }, 500);
     } else {
       statusText.textContent = 'UNPROTECTED';
       ipValue.textContent = realIp;
       speedValue.textContent = 'N/A';
       adsValue.textContent = '0';
       stopTicking();
-      exposureIp.textContent = realIp;
-      exposureIsp.textContent = realIsp;
-      exposureStatus.textContent = 'Unprotected';
-      exposureStatus.classList.remove('status-protected');
-      exposureStatus.classList.add('status-unprotected');
     }
   }
 

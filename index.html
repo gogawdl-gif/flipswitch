@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>FlipSwitch: Go private in one flip.</title>
-<meta name="description" content="FlipSwitch is a VPN and ad blocker for iPhone, iPad, and Mac, controlled by one switch. WireGuard, zero logs." />
+<meta name="description" content="FlipSwitch is a VPN and ad blocker for iPhone, iPad, and Mac, controlled by one switch. Zero logs." />
 <link rel="canonical" href="https://www.useflipswitch.com/" />
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -19,7 +19,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="FlipSwitch" />
 <meta property="og:title" content="FlipSwitch: Go private in one flip." />
-<meta property="og:description" content="A VPN and ad blocker for iPhone, iPad, and Mac, controlled by one switch. WireGuard, zero logs." />
+<meta property="og:description" content="A VPN and ad blocker for iPhone, iPad, and Mac, controlled by one switch. Zero logs." />
 <meta property="og:url" content="https://www.useflipswitch.com/" />
 <meta property="og:image" content="https://www.useflipswitch.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
@@ -27,7 +27,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="FlipSwitch: Go private in one flip." />
-<meta name="twitter:description" content="A VPN and ad blocker for iPhone, iPad, and Mac, controlled by one switch. WireGuard, zero logs." />
+<meta name="twitter:description" content="A VPN and ad blocker for iPhone, iPad, and Mac, controlled by one switch. Zero logs." />
 <meta name="twitter:image" content="https://www.useflipswitch.com/og-image.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +87,7 @@
         <h1>Go private in<br>one flip.</h1>
         <p class="hero-sub">A VPN and ad blocker for iPhone, iPad, and Mac. One switch. Nothing to configure.</p>
         <a href="#cta" class="btn btn-primary btn-lg">Download on the App Store</a>
-        <p class="hero-fine">WireGuard. Zero logs.</p>
+        <p class="hero-fine">Zero logs. Nothing to explain.</p>
       </div>
 
       <div class="hero-demo">
@@ -128,10 +128,6 @@
               <span class="readout-value mono" id="speedValue">N/A</span>
             </div>
           </div>
-
-          <div class="app-card-reveal" id="appCardReveal">
-            <a href="#cta" class="btn btn-primary btn-sm">Get real protection</a>
-          </div>
         </div>
         <p class="hero-demo-caption">Try it. This is the actual toggle.</p>
       </div>
@@ -144,7 +140,7 @@
         <div class="feature-card">
           <div class="feature-mark">01</div>
           <h3>Full-tunnel VPN</h3>
-          <p>WireGuard, routed through a Network Extension. Every app uses it, not just Safari.</p>
+          <p>Every app on your device is protected, not just Safari.</p>
         </div>
         <div class="feature-card">
           <div class="feature-mark">02</div>
@@ -167,15 +163,17 @@
           <span class="browser-dot"></span>
           <span class="browser-dot"></span>
           <div class="browser-url mono">example.com</div>
+          <span class="browser-blocked-count mono">3 blocked</span>
         </div>
         <div class="browser-page">
           <div class="page-line page-line-title"></div>
           <div class="page-line"></div>
           <div class="page-line page-line-short"></div>
-          <div class="ad-slot mono">AD BLOCKED</div>
+          <div class="page-image"></div>
+          <div class="ad-slot"><span class="ad-slot-badge mono">BLOCKED</span></div>
           <div class="page-line"></div>
           <div class="page-line page-line-short"></div>
-          <div class="ad-slot mono">TRACKER BLOCKED</div>
+          <div class="ad-slot"><span class="ad-slot-badge mono">BLOCKED</span></div>
           <div class="page-line"></div>
         </div>
       </div>
@@ -185,7 +183,7 @@
   <section class="manifesto section-dark">
     <div class="wrap">
       <h2>Privacy shouldn't need a manual.</h2>
-      <p>Every other app in this category hands you a control panel and calls it power. We read the protocol spec, made the calls, and shipped one switch.</p>
+      <p>Most VPNs hand you a wall of settings and expect you to know what they mean. We didn't think that was fair. So we made the decisions for you, and left you with one switch.</p>
     </div>
   </section>
 
@@ -202,21 +200,22 @@
   </section>
 
   <section class="servers" aria-label="Server locations">
-    <div class="wrap">
+    <div class="wrap servers-inner">
       <div class="servers-head">
         <h2>47 countries when you want them.</h2>
-        <p class="servers-sub">Automatic when you don't.</p>
+        <p class="servers-sub">Automatic when you don't. FlipSwitch picks the fastest one and gets out of the way.</p>
       </div>
-      <div class="servers-grid">
-        <div class="server-chip server-chip-active"><span class="server-dot"></span>Automatic</div>
-        <div class="server-chip">🇺🇸 United States</div>
-        <div class="server-chip">🇬🇧 United Kingdom</div>
-        <div class="server-chip">🇩🇪 Germany</div>
-        <div class="server-chip">🇯🇵 Japan</div>
-        <div class="server-chip">🇸🇬 Singapore</div>
-        <div class="server-chip">🇨🇦 Canada</div>
-        <div class="server-chip">🇦🇺 Australia</div>
-        <div class="server-chip">🇳🇱 Netherlands</div>
+      <div class="server-panel section-dark">
+        <div class="server-row server-row-active">
+          <span>Automatic</span>
+          <span class="mono">Fastest</span>
+        </div>
+        <div class="server-row"><span>United States</span><span class="mono">12 ms</span></div>
+        <div class="server-row"><span>United Kingdom</span><span class="mono">31 ms</span></div>
+        <div class="server-row"><span>Germany</span><span class="mono">28 ms</span></div>
+        <div class="server-row"><span>Japan</span><span class="mono">142 ms</span></div>
+        <div class="server-row"><span>Singapore</span><span class="mono">156 ms</span></div>
+        <div class="server-row"><span>Canada</span><span class="mono">19 ms</span></div>
       </div>
     </div>
   </section>
@@ -227,19 +226,19 @@
       <div class="compare-table">
         <div class="compare-col compare-col-them">
           <div class="compare-head">Everyone else</div>
-          <div class="compare-row">47 settings screens</div>
-          <div class="compare-row">Protocol picker you didn't ask for</div>
-          <div class="compare-row">"Choose your server" from 94 cities</div>
-          <div class="compare-row">Ad blocker sold separately</div>
-          <div class="compare-row">Fear copy about hackers on airport wifi</div>
+          <div class="compare-row"><span class="compare-mark compare-mark-no">✕</span>47 settings screens</div>
+          <div class="compare-row"><span class="compare-mark compare-mark-no">✕</span>Protocol picker you didn't ask for</div>
+          <div class="compare-row"><span class="compare-mark compare-mark-no">✕</span>"Choose your server" from 94 cities</div>
+          <div class="compare-row"><span class="compare-mark compare-mark-no">✕</span>Ad blocker sold separately</div>
+          <div class="compare-row"><span class="compare-mark compare-mark-no">✕</span>Fear copy about hackers on airport wifi</div>
         </div>
         <div class="compare-col compare-col-us">
           <div class="compare-head">FlipSwitch</div>
-          <div class="compare-row">One switch</div>
-          <div class="compare-row">WireGuard, decided for you</div>
-          <div class="compare-row">Nearest server, picked automatically</div>
-          <div class="compare-row">Built in</div>
-          <div class="compare-row">A switch that works</div>
+          <div class="compare-row"><span class="compare-mark compare-mark-yes">✓</span>One switch</div>
+          <div class="compare-row"><span class="compare-mark compare-mark-yes">✓</span>No settings to pick</div>
+          <div class="compare-row"><span class="compare-mark compare-mark-yes">✓</span>Nearest server, picked automatically</div>
+          <div class="compare-row"><span class="compare-mark compare-mark-yes">✓</span>Built in</div>
+          <div class="compare-row"><span class="compare-mark compare-mark-yes">✓</span>A switch that works</div>
         </div>
       </div>
     </div>
@@ -251,19 +250,19 @@
       <div class="faq-list">
         <details class="faq-item">
           <summary>Does it slow down my connection?</summary>
-          <p>About 3% on average with WireGuard.</p>
+          <p>A little. Most people don't notice.</p>
         </details>
         <details class="faq-item">
           <summary>Do you keep any logs?</summary>
-          <p>No. Nothing to hand over, because nothing exists.</p>
+          <p>No. There's nothing to hand over because we don't collect it.</p>
         </details>
         <details class="faq-item">
           <summary>Which devices does it support?</summary>
-          <p>iPhone, iPad, and Apple Silicon Mac. One account, no per-device pricing.</p>
+          <p>iPhone, iPad, and Mac. One subscription covers all of them.</p>
         </details>
         <details class="faq-item">
           <summary>What happens when I flip it off?</summary>
-          <p>You're back to your normal connection immediately.</p>
+          <p>You're back to normal instantly. No lingering effects.</p>
         </details>
       </div>
     </div>
@@ -271,7 +270,7 @@
 
   <section class="final-cta section-dark" id="cta">
     <div class="wrap final-cta-inner">
-      <h2>Flip it. Forget it.</h2>
+      <h2>You just tried it.<br>Now make it real.</h2>
       <a href="#" class="btn btn-primary btn-lg">Download on the App Store</a>
     </div>
   </section>
