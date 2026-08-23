@@ -7,7 +7,7 @@
   const speedValue = document.getElementById('speedValue');
 
   const REAL_IP = '104.28.212.9';
-  const MASKED_IP = '—.—.—.—';
+  const MASKED_IP = '•.•.•.•';
 
   let on = false;
   let adsCount = 0;
@@ -50,7 +50,7 @@
     } else {
       statusText.textContent = 'UNPROTECTED';
       ipValue.textContent = REAL_IP;
-      speedValue.textContent = '—';
+      speedValue.textContent = 'N/A';
       adsValue.textContent = '0';
       stopTicking();
     }
